@@ -4,7 +4,7 @@ A web application that tracks Near-Earth Objects (NEOs) using NASA's NeoWs API. 
 
 ##  Live Demo
 
-[Link to deployed app](#) 
+[Live Demo](https://asteroids-explorer.vercel.app)
 
 ##  Features
 
