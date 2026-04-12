@@ -12,8 +12,8 @@ const AsteroidModal = ({ asteroid, onClose }: AsteroidModalProps) => {
     const diameter = asteroid.estimated_diameter.kilometers
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
-            <div className="bg-gray-900 text-white p-6 rounded-lg max-w-lg w-full relative">
+        <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 px-4">
+            <div className="bg-gray-900 text-white p-5 sm:p-6 rounded-lg max-w-lg w-full relative max-h-[90vh] overflow-y-auto">
                 <button
                     onClick={onClose}
                     className="absolute top-4 right-4 text-gray-400 hover:text-white"

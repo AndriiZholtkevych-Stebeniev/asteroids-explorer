@@ -22,15 +22,15 @@ const FilterBar = ({ onSearch }: FilterBarProps) => {
     }
 
     return (
-        <div className="flex flex-col items-center gap-4">
-            <div className="flex gap-3 items-center">
+        <div className="flex flex-col items-center gap-4 w-full px-4">
+            <div className="flex flex-col sm:flex-row gap-3 items-stretch sm:items-end w-full sm:w-auto">
                 <div className="flex flex-col gap-1">
                     <label className="text-gray-400 text-xs uppercase tracking-widest">Start Date</label>
                     <input
                         type="date"
                         value={startDate}
                         onChange={(e) => setStartDate(e.target.value)}
-                        className="bg-gray-900 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500 [color-scheme:dark]"
+                        className="bg-gray-900 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500 [color-scheme:dark] w-full"
                     />
                 </div>
                 <div className="flex flex-col gap-1">
@@ -39,12 +39,12 @@ const FilterBar = ({ onSearch }: FilterBarProps) => {
                         type="date"
                         value={endDate}
                         onChange={(e) => setEndDate(e.target.value)}
-                        className="bg-gray-900 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500 [color-scheme:dark]"
+                        className="bg-gray-900 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500 [color-scheme:dark] w-full"
                     />
                 </div>
                 <button
                     onClick={handleSubmit}
-                    className="mt-5 bg-blue-600 hover:bg-blue-500 transition-all duration-200 text-white font-semibold px-8 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/20"
+                    className="sm:mt-5 bg-blue-600 hover:bg-blue-500 transition-all duration-200 text-white font-semibold px-8 py-2 rounded-lg hover:shadow-lg hover:shadow-blue-500/20"
                 >
                     Search
                 </button>

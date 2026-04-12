@@ -27,7 +27,8 @@ const BubbleChart = ({ data }: BubbleChartProps) => {
     return (
         <div className="p-4">
             <h2 className="text-white text-xl font-bold mb-4">Asteroid Velocity vs Date</h2>
-            <ResponsiveContainer width="100%" height={400}>
+            <div className="h-[260px] sm:h-[400px]">
+            <ResponsiveContainer width="100%" height="100%">
                 <ScatterChart>
                     <XAxis dataKey="date" stroke="#9ca3af" />
                     <YAxis dataKey="velocity" stroke="#9ca3af" name="Velocity (km/h)" />
@@ -55,6 +56,7 @@ const BubbleChart = ({ data }: BubbleChartProps) => {
                     </Scatter>
                 </ScatterChart>
             </ResponsiveContainer>
+            </div>
         </div>
     )
 }

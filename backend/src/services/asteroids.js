@@ -18,7 +18,7 @@ export const fetchFeed = async (start_date, end_date) => {
 }
 
 export const fetchById = async (id) => {
-    const respinse = await axios.get(`${BASE_URL}/neo/${id}`, {
+    const response = await axios.get(`${BASE_URL}/neo/${id}`, {
         params: {
             api_key: NASA_API_KEY
         }

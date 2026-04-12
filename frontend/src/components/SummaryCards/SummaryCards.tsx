@@ -16,18 +16,18 @@ const SummaryCards = ({ data }: SummaryCardsProps) => {
     })
 
     return (
-        <div className="flex gap-4 p-4">
-            <div className="bg-gray-800 text-white p-4 rounded-lg flex-1">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4">
+            <div className="bg-gray-800 text-white p-4 rounded-lg">
                 <p className="text-gray-400 text-sm">Total Asteroids</p>
                 <p className="text-3xl font-bold">{data.element_count}</p>
             </div>
-            <div className="bg-red-900 text-white p-4 rounded-lg flex-1">
+            <div className="bg-red-900 text-white p-4 rounded-lg">
                 <p className="text-gray-400 text-sm">Potentially Hazardous</p>
                 <p className="text-3xl font-bold">{hazardousCount}</p>
             </div>
-            <div className="bg-gray-800 text-white p-4 rounded-lg flex-1">
+            <div className="bg-gray-800 text-white p-4 rounded-lg">
                 <p className="text-gray-400 text-sm">Closest to Earth</p>
-                <p className="text-xl font-bold">{closest.name}</p>
+                <p className="text-xl font-bold break-words">{closest.name}</p>
             </div>
         </div>
     )

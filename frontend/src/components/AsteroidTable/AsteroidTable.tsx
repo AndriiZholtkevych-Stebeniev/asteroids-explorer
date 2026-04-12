@@ -67,11 +67,11 @@ const AsteroidTable = ({ data, onSelect }: AsteroidTableProps) => {
                     placeholder="Search by name..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="w-full max-w-sm bg-gray-900 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500 placeholder-gray-500"
+                    className="w-full sm:max-w-sm bg-gray-900 border border-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500 placeholder-gray-500"
                 />
             </div>
             <div className="overflow-x-auto rounded-lg border border-gray-800">
-                <table className="w-full text-white">
+                <table className="w-full text-white min-w-[560px]">
                     <thead>
                         <tr className="bg-gray-900 text-gray-400 text-left text-sm">
                             <th className="p-3 cursor-pointer hover:text-white" onClick={() => handleSort("name")}>
@@ -80,10 +80,10 @@ const AsteroidTable = ({ data, onSelect }: AsteroidTableProps) => {
                             <th className="p-3 cursor-pointer hover:text-white" onClick={() => handleSort("date")}>
                                 Date <SortIcon col="date" />
                             </th>
-                            <th className="p-3 cursor-pointer hover:text-white" onClick={() => handleSort("distance")}>
+                            <th className="p-3 cursor-pointer hover:text-white whitespace-nowrap" onClick={() => handleSort("distance")}>
                                 Distance (km) <SortIcon col="distance" />
                             </th>
-                            <th className="p-3 cursor-pointer hover:text-white" onClick={() => handleSort("velocity")}>
+                            <th className="p-3 cursor-pointer hover:text-white whitespace-nowrap" onClick={() => handleSort("velocity")}>
                                 Velocity (km/h) <SortIcon col="velocity" />
                             </th>
                             <th className="p-3">Hazardous</th>
@@ -97,9 +97,9 @@ const AsteroidTable = ({ data, onSelect }: AsteroidTableProps) => {
                                 className="border-t border-gray-800 hover:bg-gray-900 cursor-pointer transition-colors"
                             >
                                 <td className="p-3 font-medium">{asteroid.name}</td>
-                                <td className="p-3 text-gray-400">{asteroid.close_approach_data[0].close_approach_date}</td>
-                                <td className="p-3 text-gray-400">{parseFloat(asteroid.close_approach_data[0].miss_distance.kilometers).toLocaleString()}</td>
-                                <td className="p-3 text-gray-400">{parseFloat(asteroid.close_approach_data[0].relative_velocity.kilometers_per_hour).toLocaleString()}</td>
+                                <td className="p-3 text-gray-400 whitespace-nowrap">{asteroid.close_approach_data[0].close_approach_date}</td>
+                                <td className="p-3 text-gray-400 whitespace-nowrap">{parseFloat(asteroid.close_approach_data[0].miss_distance.kilometers).toLocaleString()}</td>
+                                <td className="p-3 text-gray-400 whitespace-nowrap">{parseFloat(asteroid.close_approach_data[0].relative_velocity.kilometers_per_hour).toLocaleString()}</td>
                                 <td className="p-3">
                                     {asteroid.is_potentially_hazardous_asteroid
                                         ? <span className="bg-red-950 text-red-400 px-2 py-0.5 rounded-full text-xs font-medium">Hazardous</span>
